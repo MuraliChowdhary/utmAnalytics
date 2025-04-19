@@ -1,0 +1,1 @@
+{"root":["./worker-configuration.d.ts","./src/index.ts","./src/db/pool.ts","./src/db/queries.ts","./src/handlers/conversion.ts","./src/handlers/redirect.ts","./src/handlers/url.ts","./src/templates/consent.ts"],"version":"5.6.2"}
