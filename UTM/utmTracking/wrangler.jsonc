@@ -1,0 +1,18 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "utmtracking",
+    "main": "src/index.ts",
+    "compatibility_date": "2025-04-18",
+    "compatibility_flags": [
+      "nodejs_compat"
+    ],
+    "vars": {
+      "DATABASE_URL": "postgresql://Neon_owner:npg_q6WrRLGKAkN8@ep-little-bar-a1yo017r-pooler.ap-southeast-1.aws.neon.tech/Neon?sslmode=require" },
+    "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "56c4d14c2e6a49aaa38bcab9085f57e7",
+      "localConnectionString": "postgresql://Neon_owner:npg_q6WrRLGKAkN8@ep-little-bar-a1yo017r-pooler.ap-southeast-1.aws.neon.tech/Neon?sslmode=require"
+    }
+  ]
+  }

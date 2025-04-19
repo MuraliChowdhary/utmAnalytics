@@ -1,0 +1,32 @@
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["driverAdapters"]
+  output          = "./generated/client" // optional, can be inside /generated
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  //directUrl = env("DIRECT_URL")  
+}
+
+
+model Url {
+  id             String    @id @default(uuid())
+  shortId        String    @unique
+  originalUrl    String
+  totalClicks    Int       @default(0)
+  uniqueClicks   Int       @default(0)
+  visitorDetails Visitor[] 
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model Visitor {
+  id      String  @id @default(uuid())
+  visitorId String
+  city      String
+  url       Url    @relation(fields: [urlId], references: [id])
+  urlId     String
+}
